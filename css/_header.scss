@@ -1,0 +1,67 @@
+.header{
+    width: 100%;
+    height: 36vh;
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+
+    h1{
+        margin: 0;
+        padding: 1.875rem 0rem;
+        font-size: calc(1rem + 1.2vw);
+        color: white;
+        font-weight: 500;
+    }
+
+    form{
+        margin:0 auto; padding:0;
+        width: 87%;
+        max-width: 560px;
+        display: flex;
+        justify-content: center;
+
+
+        input, button{
+            padding: 1rem 1.5rem;
+            border: 0; outline:0;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        input[type="text"]{
+            width: 80%;
+            font-size: 1.125rem;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        button{
+            background-color: $veryDarkGray;
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+
+    #info{
+        width: 87%;
+        max-width: 1120px;
+        background-color: white;
+        height: 20vh;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid red;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .header{
+        h1{
+            padding: 2.1875rem 0rem;
+        }
+    }
+}

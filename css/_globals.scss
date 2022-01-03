@@ -1,10 +1,17 @@
 *{
+    padding: 0; margin:0;
     box-sizing: border-box;
 }
 html{
     font-size: 100%;
 }
+
+//Variables
+$veryDarkGray: hsl(0, 0%, 17%);
+$darkGray: hsl(0, 0%, 59%);
+
 body{
     font-family: 'Rubik', sans-serif;
     font-size: 1.125rem;
+    font-weight: 400;
 }
