@@ -504,8 +504,6 @@ body {
   }
   .header #info {
     padding: 2.5rem 1.875rem;
-    -webkit-column-gap: 1.875rem;
-            column-gap: 1.875rem;
   }
   .header #info .info-item h3 {
     font-size: 0.75rem;
