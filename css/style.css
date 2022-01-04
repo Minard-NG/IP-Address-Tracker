@@ -380,7 +380,7 @@ body {
   font-weight: 500;
 }
 
-.header form {
+.header .form {
   margin: 0 auto;
   padding: 0;
   width: 87%;
@@ -392,31 +392,30 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 10px;
-  outline: 2px solid red;
 }
 
-.header form input, .header form button {
+.header .form input, .header .form button {
   padding: 1rem 1.5rem;
   border: 0;
   outline: 0;
 }
 
-.header form input:hover, .header form button:hover {
+.header .form input:hover, .header .form button:hover {
   cursor: pointer;
 }
 
-.header form input[type="text"] {
+.header .form input[type="text"] {
   width: 100%;
   font-size: 1.125rem;
   border-radius: 10px 0px 0px 10px;
 }
 
-.header form button {
+.header .form button {
   background-color: #2b2b2b;
   border-radius: 0px 10px 10px 0px;
 }
 
-.header form button:hover {
+.header .form button:hover {
   opacity: 0.92;
 }
 

@@ -18,14 +18,13 @@
         font-weight: 500;
     }
 
-    form{
+    .form{
         margin:0 auto; padding:0;
         width: 87%;
         max-width: 560px;
         display: flex;
         justify-content: center;
         border-radius: 10px;
-        outline: 2px solid red;
 
 
         input, button{
