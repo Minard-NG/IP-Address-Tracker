@@ -111,7 +111,7 @@ function render(data) {
 }
 
 //default render
-//getData();
+getData();
 
 
 
