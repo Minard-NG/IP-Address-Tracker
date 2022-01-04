@@ -35,7 +35,7 @@ let cta_btn = document.getElementById('cta_btn');
 //getting reference to the input field on the document
 let input_field = document.getElementById('address_input');
 
-//getting referenc to the div with class form
+//getting reference to the div with class form
 let form_div = document.querySelector('.form');
 
 //binding a click event handler to the button
@@ -53,15 +53,13 @@ cta_btn.addEventListener('click', (evt) => {
             input_field.value = '';
             input_field.placeholder = "Invalid IP/Domain name!";
         } else {
-            if(validity.isIP){
+            if (validity.isIP) {
                 //if input field value is a valid IP
-                console.log('valid IP');
                 getData(input_field.value, "ipaddress")
             }
 
-            if(validity.isDomain){
+            if (validity.isDomain) {
                 //if input field value is a valid domain name
-                console.log('valid Domain name')
                 getData(input_field.value, "domain")
             }
         }
@@ -75,19 +73,21 @@ cta_btn.addEventListener('click', (evt) => {
 });
 
 //asynchronous function to handle call to the IPify api
-async function getData(url="", mode="initial"){
+async function getData(url = "", mode = "initial") {
     let response;
-    if(mode === "initial"){
+  
+    if (mode === "initial") {
         response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l`)
     }
-    if(mode === "ipaddress"){
-        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&ipAddress=${url}`)
+    if (mode === "ipaddress") {
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&ipaddress=${url}`)
     }
-    if(mode === "domain"){
+    if (mode === "domain") {
         response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&domain=${url}`)
+
     }
 
-    let data = response.json();
+    let data = await response.json();
     render(data);
 }
 
@@ -97,17 +97,22 @@ let locs = document.getElementById('location');
 let timez = document.getElementById('timezone');
 let isp = document.getElementById('isp');
 
-function render(data){
+function render(data) {
     ip.innerText = data.ip;
     locs.innerText = `${data.location.city}, ${data.location.region} ${data.location.country}.`;
-    timez = `UTC ${data.location.timezone}`;
-    isp = data.isp;
+    timez.innerText = `UTC ${data.location.timezone}`;
+    isp.innerText = data.isp;
 
-    let map = L.map('map').setView([51.505, -0.09], 13);
+    let map = L.map('map').setView([data.location.lat, data.location.lng], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    let marker = L.marker([data.location.lat, data.location.lng]).addTo(map);
 }
 
-var map = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+//default render
+//getData();
+
+
 
