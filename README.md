@@ -1,8 +1,10 @@
 # Frontend Mentor - IP address tracker solution
 
-IP tracking technologies are very useful to easily search, find, track and trace the location along with other subtle information not only of your public IP but other publicily accessible IPs and domains in the world.
+IP tracking technologies are very useful to easily search, find, track and trace the location along with other subtle information not only of your public IP but other publicly accessible IPs and domains in the world.
 
 In this project I implement these functionalities using the IPify and LeafletJS APIs.
+
+N/B: Disable adblockers on the browser for optimum performance.
 
 ## Table of contents
 
@@ -60,6 +62,7 @@ Users should be able to:
 - Practiced more asynchronous JS working with two different apis
 - Practiced more functional programming.
 - Learnt more about validation for ipv4/ipv6, & domain name using regex.
+- Ways to Fix the “Failed to Load Resource: net::ERR_BLOCKED_BY_CLIENT” Error.
 
 ### Continued development
 
