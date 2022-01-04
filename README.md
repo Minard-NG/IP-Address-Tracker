@@ -75,7 +75,7 @@ Continue building out awesome web applications. Learn more about HTML forms and 
 - [Regex Testing from Dan's tool](https://www.regextester.com/104038) - This is an amazing resource helped me figure out the standard regex for validation of ipv4/ipv6 addresses.
 - [IP Geolocation API](https://geo.ipify.org/docs) - Documentation for IPify api.
 - [Leaflet JS](https://leafletjs.com/examples/quick-start/) - Quick start guide to using LeafletJS.
-
+- [Normalize CSS](https://necolas.github.io/normalize.css/) - Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.
 
 
 ## Author
