@@ -102,7 +102,8 @@ function render(data) {
     timez.innerText = `UTC ${data.location.timezone}`;
     isp.innerText = data.isp;
 
-    let map = L.map('map').setView([data.location.lat, data.location.lng], 12);
+    //LeafletJS api codes
+    let map = L.map('map').setView([data.location.lat, data.location.lng], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
