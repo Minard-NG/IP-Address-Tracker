@@ -55,12 +55,14 @@ cta_btn.addEventListener('click', (evt) => {
         } else {
             if(validity.isIP){
                 //if input field value is a valid IP
-                console.log('valid IP')
+                console.log('valid IP');
+                getData(input_field.value, "ipaddress")
             }
 
             if(validity.isDomain){
                 //if input field value is a valid domain name
                 console.log('valid Domain name')
+                getData(input_field.value, "domain")
             }
         }
     } else {
@@ -71,3 +73,35 @@ cta_btn.addEventListener('click', (evt) => {
 
     }
 });
+
+//asynchronous function to handle call to the IPify api
+async function getData(url="", mode="initial"){
+    let response;
+    if(mode === "initial"){
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l`)
+    }
+    if(mode === "ipaddress"){
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&ipAddress=${url}`)
+    }
+    if(mode === "domain"){
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&domain=${url}`)
+    }
+
+    let data = response.json();
+    render(data);
+}
+
+//get reference to the p tags needed for render
+let ip = document.getElementById('ip');
+let locs = document.getElementById('location');
+let timez = document.getElementById('timezone');
+let isp = document.getElementById('isp');
+
+function render(data){
+    ip.innerText = data.ip;
+    locs.innerText = `${data.location.city}, ${data.location.region} ${data.location.country}.`;
+    timez = `UTC ${data.location.timezone}`;
+    isp = data.isp;
+
+
+}
