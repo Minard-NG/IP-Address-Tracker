@@ -1,6 +1,8 @@
 # Frontend Mentor - IP address tracker solution
 
-This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+IP tracking technologies are very useful to easily search, find, track and trace the location along with other subtle information not only of your public IP but other publicily accessible IPs and domains in the world.
+
+In this project I implement these functionalities using the IPify and LeafletJS APIs.
 
 ## Table of contents
 
@@ -56,18 +58,22 @@ Users should be able to:
 
 - Reinforced my knowledge of page layouts and resonsive web design.
 - Practiced more asynchronous JS working with two different apis
-- Practice more functional programming
+- Practiced more functional programming.
+- Learnt more about validation for ipv4/ipv6, & domain name using regex.
 
 ### Continued development
 
-Continue building out awesome web applications
+Continue building out awesome web applications. Learn more about HTML forms and regular expressions.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [4 Ways to Fix the “Failed to Load Resource: net::ERR_BLOCKED_BY_CLIENT” Error](https://kinsta.com/blog/err_blocked_by_client/) - This articled helped me resolve the error I kept getting, when I tried to fetch from the IPify endpoint.
+- [Domain Name validation](https://regexr.com/3au3g) - This is an amazing resource helped me figure out the standard regex for validation of domain names.
+- [Regex Testing from Dan's tool](https://www.regextester.com/104038) - This is an amazing resource helped me figure out the standard regex for validation of ipv4/ipv6 addresses.
+- [IP Geolocation API](https://geo.ipify.org/docs) - Documentation for IPify api.
+- [Leaflet JS](https://leafletjs.com/examples/quick-start/) - Quick start guide to using LeafletJS.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
 
 ## Author
 
