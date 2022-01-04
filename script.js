@@ -77,14 +77,13 @@ async function getData(url = "", mode = "initial") {
     let response;
   
     if (mode === "initial") {
-        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l`)
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l`);
     }
     if (mode === "ipaddress") {
-        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&ipaddress=${url}`)
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&ipaddress=${url}`);
     }
     if (mode === "domain") {
-        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&domain=${url}`)
-
+        response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_pshocbxkdKtwJm1wCdPya2EaR3o0l&domain=${url}`);
     }
 
     let data = await response.json();
